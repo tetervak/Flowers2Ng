@@ -1,10 +1,10 @@
+<h1>{{title}}</h1>
 <main>
-  <h1>{{title}}</h1>
   <h2>Pick a Flower</h2>
   <div id="image_list">
     <img *ngFor="let f of flowers; let i=index;"
          [ngClass]="(flowers[i].label === flower.label)?'thumb selected':'thumb'"
-         [src]="f.smallImgSrc"
+         [src]="f.smallImgSrc" [alt]="f.label"
          (click)="selectFlower(i)">
   </div>
   <p>
